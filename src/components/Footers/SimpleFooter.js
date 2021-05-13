@@ -109,50 +109,51 @@ class SimpleFooter extends React.Component {
                 <div className=" copyright">
                   © {new Date().getFullYear()}{" "}
                   <a
-                    href="https://www.creative-tim.com?ref=adsr-footer"
-                    target="_blank"
+                    href="landing-page"
                   >
-                    Creative Tim
+                    Metanoia Books Co.
                   </a>
-                  .
                 </div>
               </Col>
               <Col md="6">
-                <Nav className=" nav-footer justify-content-end">
+                <Nav className="nav-footer justify-content-end">
                   <NavItem>
                     <NavLink
-                      href="https://www.creative-tim.com?ref=adsr-footer"
-                      target="_blank"
+                      href="landing-page"
                     >
-                      Creative Tim
+                      Home
                     </NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="https://www.creative-tim.com/presentation?ref=adsr-footer"
-                      target="_blank"
+                      href="#about"
                     >
                       About Us
                     </NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="http://blog.creative-tim.com?ref=adsr-footer"
-                      target="_blank"
+                      href="#"
                     >
-                      Blog
+                      FAQs
                     </NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md"
-                      target="_blank"
+                      href="#"
                     >
-                      MIT License
+                      Subscribe
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      href="login-page"
+                    >
+                      Log In/Register
                     </NavLink>
                   </NavItem>
                 </Nav>
-              </Col>
+              </Col> 
             </Row>
           </Container>
         </footer>

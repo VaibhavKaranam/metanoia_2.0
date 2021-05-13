@@ -196,7 +196,7 @@ class DemoNavbar extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#about"
+                      href="about-page"
                       id="tooltip333589074"
                     >
                       <i className="ni ni-ui-04 d-lg-none mr-1" />
