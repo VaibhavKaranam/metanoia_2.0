@@ -38,6 +38,10 @@ import {
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
+// images
+import GoogleImage from "assets/img/icons/common/google.svg";
+import GithubImage from "assets/img/icons/common/github.svg";
+
 class Login extends React.Component {
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -60,7 +64,10 @@ class Login extends React.Component {
               <span />
               <span />
             </div>
-            <Container className="pt-lg-7">
+            <Container>
+              {/* <Row className="justify-content-center">
+              <h2 className="display-3 text-white">Sign In</h2>
+              </Row> */}
               <Row className="justify-content-center">
                 <Col lg="5">
                   <Card className="bg-secondary shadow border-0">
@@ -78,7 +85,7 @@ class Login extends React.Component {
                           <span className="btn-inner--icon mr-1">
                             <img
                               alt="..."
-                              src={require("assets/img/icons/common/github.svg")}
+                              src={GithubImage}
                             />
                           </span>
                           <span className="btn-inner--text">Github</span>
@@ -92,7 +99,7 @@ class Login extends React.Component {
                           <span className="btn-inner--icon mr-1">
                             <img
                               alt="..."
-                              src={require("assets/img/icons/common/google.svg")}
+                              src={GoogleImage}
                             />
                           </span>
                           <span className="btn-inner--text">Google</span>

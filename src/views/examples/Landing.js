@@ -17,7 +17,8 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledCarousel
+  UncontrolledCarousel,
+  Modal
 } from "reactstrap";
 
 // core components
@@ -27,24 +28,31 @@ import CardsFooter from "components/Footers/CardsFooter.js";
 // index page sections
 import Download from "../IndexSections/Download.js";
 
+// images
+import Banner from "assets/img/theme/banner.png";
+import NewsletterImage from "assets/img/theme/newsletter.png";
+import AccessibilityIcon from "assets/img/icons/accessibility_icon.png";
+import ImpactIcon from "assets/img/icons/impact_icon.png";
+import BiasPreventionIcon from "assets/img/icons/bias_prevention_icon.png";
+
 const items = [
   {
-    src: '',
-    altText: 'hello!',
+    src: Banner,
+    altText: 'hello! this is a placeholder for now',
     caption: '-Nicole Dattilo',
-    header: 'I love books!'
+    header: 'hello! this is a placeholder for now'
   },
   {
-    src: '',
+    src: Banner,
     altText: 'hello!',
     caption: '-Nicole Dattilo',
-    header: 'I love books!'
+    header: 'hello! this is a placeholder for now'
   },
   {
-    src: '',
+    src: Banner,
     altText: 'hello!',
     caption: '-Nicole Dattilo',
-    header: 'I love books!'
+    header: 'hello! this is a placeholder for now'
   }
 ];
 
@@ -55,6 +63,16 @@ class Landing extends React.Component {
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
   }
+
+  state = {
+    comingSoonModal: false
+  };
+  toggleModal = state => {
+    this.setState({
+      [state]: !this.state[state]
+    });
+  };
+
   render() {
     return (
       <>
@@ -62,8 +80,14 @@ class Landing extends React.Component {
         <main ref="main">
           <div className="position-relative">
             {/* shape Hero */}
-            <section className="section section-lg section-shaped pb-250">
+            <section className="section section-lg section-shaped pb-300">
               <div className="shape shape-style-1 shape-default">
+              <img
+                      alt="..."
+                      src={Banner}
+                      
+                    />
+                {/* <span />
                 <span />
                 <span />
                 <span />
@@ -71,8 +95,7 @@ class Landing extends React.Component {
                 <span />
                 <span />
                 <span />
-                <span />
-                <span />
+                <span /> */}
               </div>
               <Container className="py-lg-md d-flex">
                 <div className="col px-0">
@@ -88,7 +111,7 @@ class Landing extends React.Component {
                         <Button
                           className="btn-icon mb-3 mb-sm-0"
                           color="info"
-                          href="#"
+                          href="register-page"
                         >
                           <span className="btn-inner--text">Get Started</span>
                         </Button>
@@ -144,11 +167,45 @@ class Landing extends React.Component {
                           <Button
                             className="mt-4"
                             color="primary"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            href=""
+                            onClick={() => this.toggleModal("comingSoonModal")}
                           >
                             Explore
                           </Button>
+                          <Modal
+                            className="modal-dialog-centered modal-primary"
+                            contentClassName="bg-gradient-primary"
+                            isOpen={this.state.comingSoonModal}
+                            toggle={() => this.toggleModal("comingSoonModal")}
+                          >
+                            <div className="modal-header">
+                              <button
+                                aria-label="Close"
+                                className="close"
+                                data-dismiss="modal"
+                                type="button"
+                                onClick={() => this.toggleModal("comingSoonModal")}
+                              >
+                                <span aria-hidden={true}>×</span>
+                              </button>
+                            </div>
+                            <div className="modal-body">
+                            <div className="py-3 text-center">
+                              <h2 className="heading">Coming soon! Check back for more updates!</h2>
+                            </div>
+                          </div>
+                          <div className="modal-footer">
+                            <Button
+                              className="text-white ml-auto"
+                              color="link"
+                              data-dismiss="modal"
+                              type="button"
+                              onClick={() => this.toggleModal("comingSoonModal")}
+                            >
+                              Close
+                            </Button>
+                          </div>
+                        </Modal>
                         </CardBody>
                       </Card>
                     </Col>
@@ -175,11 +232,45 @@ class Landing extends React.Component {
                           <Button
                             className="mt-4"
                             color="success"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            href=""
+                            onClick={() => this.toggleModal("comingSoonModal_1")}
                           >
                             Explore
                           </Button>
+                          <Modal
+                            className="modal-dialog-centered modal-success"
+                            contentClassName="bg-gradient-success"
+                            isOpen={this.state.comingSoonModal_1}
+                            toggle={() => this.toggleModal("comingSoonModal_1")}
+                          >
+                            <div className="modal-header">
+                              <button
+                                aria-label="Close"
+                                className="close"
+                                data-dismiss="modal"
+                                type="button"
+                                onClick={() => this.toggleModal("comingSoonModal_1")}
+                              >
+                                <span aria-hidden={true}>×</span>
+                              </button>
+                            </div>
+                            <div className="modal-body">
+                            <div className="py-3 text-center">
+                              <h2 className="heading">Coming soon! Check back for more updates!</h2>
+                            </div>
+                          </div>
+                          <div className="modal-footer">
+                            <Button
+                              className="text-white ml-auto"
+                              color="link"
+                              data-dismiss="modal"
+                              type="button"
+                              onClick={() => this.toggleModal("comingSoonModal_1")}
+                            >
+                              Close
+                            </Button>
+                          </div>
+                          </Modal>
                         </CardBody>
                       </Card>
                     </Col>
@@ -206,11 +297,45 @@ class Landing extends React.Component {
                           <Button
                             className="mt-4"
                             color="warning"
-                            href="#pablo"
-                            onClick={e => e.preventDefault()}
+                            href=""
+                            onClick={() => this.toggleModal("comingSoonModal_2")}
                           >
                             Explore
                           </Button>
+                          <Modal
+                            className="modal-dialog-centered modal-danger"
+                            contentClassName="bg-gradient-danger"
+                            isOpen={this.state.comingSoonModal_2}
+                            toggle={() => this.toggleModal("comingSoonModal_2")}
+                          >
+                            <div className="modal-header">
+                              <button
+                                aria-label="Close"
+                                className="close"
+                                data-dismiss="modal"
+                                type="button"
+                                onClick={() => this.toggleModal("comingSoonModal_2")}
+                              >
+                                <span aria-hidden={true}>×</span>
+                              </button>
+                            </div>
+                            <div className="modal-body">
+                            <div className="py-3 text-center">
+                              <h2 className="heading">Coming soon! Check back for more updates!</h2>
+                            </div>
+                          </div>
+                          <div className="modal-footer">
+                            <Button
+                              className="text-white ml-auto"
+                              color="link"
+                              data-dismiss="modal"
+                              type="button"
+                              onClick={() => this.toggleModal("comingSoonModal_2")}
+                            >
+                              Close
+                            </Button>
+                          </div>
+                          </Modal>
                         </CardBody>
                       </Card>
                     </Col>
@@ -226,7 +351,7 @@ class Landing extends React.Component {
                   <img
                     alt="..."
                     className="img-fluid floating"
-                    src={require("assets/img/theme/promo-1.png")}
+                    src={NewsletterImage}
                   />
                 </Col>
                 <Col className="order-md-1" md="6">
@@ -261,13 +386,13 @@ class Landing extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col className="mb-5 mb-lg-0">
+                <Col className="mb-4 mb-lg-0" md="4">
                   <div className="px-3">
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-1-800x800.jpg")}
-                      style={{ width: "200px" }}
+                      src={AccessibilityIcon}
+                      style={{ width: "300px" }}
                     />
                     <div className="pt-3 text-center">
                       <h5 className="title">
@@ -276,13 +401,13 @@ class Landing extends React.Component {
                     </div>
                   </div>
                 </Col>
-                <Col className="mb-5 mb-lg-0">
+                <Col className="mb-4 mb-lg-0" md="4">
                   <div className="px-4">
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-2-800x800.jpg")}
-                      style={{ width: "200px" }}
+                      src={ImpactIcon}
+                      style={{ width: "300px" }}
                     />
                     <div className="pt-4 text-center">
                       <h5 className="title">
@@ -291,14 +416,14 @@ class Landing extends React.Component {
                     </div>
                   </div>
                 </Col>
-                <Col className="mb-5 mb-lg-0">
+                <Col className="mb-4 mb-lg-0" md="4">
                   {/* maybe add lg="3" md="6"?? */}
                   <div className="px-4">
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={require("assets/img/theme/team-3-800x800.jpg")}
-                      style={{ width: "200px" }}
+                      src={BiasPreventionIcon}
+                      style={{ width: "300px" }}
                     />
                     <div className="pt-4 text-center">
                       <h5 className="title">
@@ -311,7 +436,7 @@ class Landing extends React.Component {
             </Container>
           </section>
           <section className="section section-lg bg-gradient-default">
-            <Container className="pt-lg pb-300">
+            <Container className="pb-300">
               <Row className="text-center justify-content-center">
                 <Col lg="10">
                   <h2 className="display-3 text-white">Testimonials</h2>

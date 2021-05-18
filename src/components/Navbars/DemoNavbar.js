@@ -39,6 +39,8 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 
+import Logo from "assets/img/brand/metanoia_newlogo.png";
+
 class DemoNavbar extends React.Component {
   componentDidMount() {
     let headroom = new Headroom(document.getElementById("navbar-main"));
@@ -75,7 +77,7 @@ class DemoNavbar extends React.Component {
               <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
                 <img
                   alt="..."
-                  src={require("assets/img/brand/metanoia_newlogo.png")}
+                  src={Logo}
                 />
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar_global">
@@ -177,8 +179,8 @@ class DemoNavbar extends React.Component {
                       <span className="nav-link-inner--text">Examples</span>
                     </DropdownToggle>
                     <DropdownMenu>
-                      <DropdownItem to="/landing-page" tag={Link}>
-                        Landing
+                      <DropdownItem to="/template-page" tag={Link}>
+                        Templates
                       </DropdownItem>
                       <DropdownItem to="/profile-page" tag={Link}>
                         Profile
@@ -206,7 +208,7 @@ class DemoNavbar extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#faqs"
+                      href="faqs-page"
                       id="tooltip356693867"
                     >
                       <i className="ni ni-ui-04 d-lg-none mr-1" />
@@ -219,7 +221,7 @@ class DemoNavbar extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="#subscribe"
+                      href="subscribe-page"
                       id="tooltip184698705"
                     >
                       <i className="ni ni-ui-04 d-lg-none mr-1" />

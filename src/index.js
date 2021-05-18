@@ -23,21 +23,23 @@ import "assets/vendor/nucleo/css/nucleo.css";
 import "assets/vendor/font-awesome/css/font-awesome.min.css";
 import "assets/scss/argon-design-system-react.scss?v1.1.0";
 
-import Index from "views/Index.js";
+import Templates from "views/Template.js";
 import Landing from "views/examples/Landing.js";
 import Login from "views/examples/Login.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
 import About from "views/examples/About.js";
+import Faqs from "views/examples/Faqs.js";
+import Subscribe from "views/examples/Subscribe.js";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/" exact render={props => <Index {...props} />} />
+      <Route path="/" exact render={props => <Landing {...props} />} />
       <Route
-        path="/landing-page"
+        path="/template-page"
         exact
-        render={props => <Landing {...props} />}
+        render={props => <Templates {...props} />}
       />
       <Route path="/login-page" exact render={props => <Login {...props} />} />
       <Route
@@ -54,6 +56,16 @@ ReactDOM.render(
         path="/about-page"
         exact
         render={props => <About {...props} />}
+      />
+      <Route
+        path="/faqs-page"
+        exact
+        render={props => <Faqs {...props} />}
+      />
+      <Route
+        path="/subscribe-page"
+        exact
+        render={props => <Subscribe {...props} />}
       />
       <Redirect to="/" />
     </Switch>
