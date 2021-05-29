@@ -208,11 +208,11 @@ class DemoNavbar extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="faqs-page"
+                      href="subscribe-page"
                       id="tooltip356693867"
                     >
                       <i className="ni ni-ui-04 d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">FAQs</span>
+                      <span className="nav-link-inner--text">Subscribe</span>
                     </NavLink>
                     {/* <UncontrolledTooltip delay={0} target="tooltip356693867">
                       Follow us on Instagram
@@ -221,11 +221,11 @@ class DemoNavbar extends React.Component {
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
-                      href="subscribe-page"
+                      href="faqs-page"
                       id="tooltip184698705"
                     >
                       <i className="ni ni-ui-04 d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Subscribe</span>
+                      <span className="nav-link-inner--text">Contact</span>
                     </NavLink>
                   </NavItem>
                   <NavItem className="d-lg-block ml-lg-4">

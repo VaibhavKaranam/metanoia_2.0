@@ -105,7 +105,7 @@ class Landing extends React.Component {
                         Metanoia{" "}
                       </h1>
                       <p className="lead text-white">
-                        Expanding Literacy and Discourse for Children
+                        The digital library that inspires conversations
                       </p>
                       <div className="btn-wrapper">
                         <Button

@@ -45,7 +45,7 @@ class Faqs extends React.Component {
                   <Row>
                     <Col lg="0">
                       <h1 className="display-3 text-white">
-                        Frequently Asked Questions (FAQs){" "}
+                        Contact Us{" "}
                       </h1>
                       <p className="lead text-white">
                         Status: Pending. Check back here for updates!
