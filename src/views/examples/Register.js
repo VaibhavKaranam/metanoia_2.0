@@ -85,7 +85,7 @@ class Register extends React.Component {
                               src={GithubImage}
                             />
                           </span>
-                          <span className="btn-inner--text">Github</span>
+                          <span className="btn-inner--text">Twitter</span>
                         </Button>
                         <Button
                           className="btn-neutral btn-icon ml-1"

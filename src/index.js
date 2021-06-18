@@ -29,7 +29,7 @@ import Login from "views/examples/Login.js";
 import Profile from "views/examples/Profile.js";
 import Register from "views/examples/Register.js";
 import About from "views/examples/About.js";
-import Faqs from "views/examples/Faqs.js";
+import Contact from "views/examples/Contact.js";
 import Subscribe from "views/examples/Subscribe.js";
 
 ReactDOM.render(
@@ -58,9 +58,9 @@ ReactDOM.render(
         render={props => <About {...props} />}
       />
       <Route
-        path="/faqs-page"
+        path="/contact-page"
         exact
-        render={props => <Faqs {...props} />}
+        render={props => <Contact {...props} />}
       />
       <Route
         path="/subscribe-page"

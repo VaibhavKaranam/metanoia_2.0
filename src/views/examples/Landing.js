@@ -34,25 +34,28 @@ import NewsletterImage from "assets/img/theme/newsletter.png";
 import AccessibilityIcon from "assets/img/icons/accessibility_icon.png";
 import ImpactIcon from "assets/img/icons/impact_icon.png";
 import BiasPreventionIcon from "assets/img/icons/bias_prevention_icon.png";
+import Testimonial1 from "assets/img/theme/testimonial1.svg";
+import Testimonial2 from "assets/img/theme/testimonial2.svg";
+import Testimonial3 from "assets/img/theme/testimonial3.svg";
 
 const items = [
   {
-    src: Banner,
-    altText: 'hello! this is a placeholder for now',
-    caption: '-Nicole Dattilo',
-    header: 'hello! this is a placeholder for now'
+    src: Testimonial1,
+    altText: '',
+    caption: '',
+    header: ''
   },
   {
-    src: Banner,
-    altText: 'hello!',
-    caption: '-Nicole Dattilo',
-    header: 'hello! this is a placeholder for now'
+    src: Testimonial2,
+    altText: '',
+    caption: '',
+    header: ''
   },
   {
-    src: Banner,
-    altText: 'hello!',
-    caption: '-Nicole Dattilo',
-    header: 'hello! this is a placeholder for now'
+    src: Testimonial3,
+    altText: '',
+    caption: '',
+    header: ''
   }
 ];
 
@@ -367,7 +370,7 @@ class Landing extends React.Component {
                       className="btn-icon"
                       color="success"
                       type="button"
-                      href="#subscribe"
+                      href="subscribe-page"
                     >
                       <span className="nav-link-inner--text ml-1">
                         Sign Up Here
@@ -387,14 +390,14 @@ class Landing extends React.Component {
               </Row>
               <Row>
                 <Col className="mb-4 mb-lg-0" md="4">
-                  <div className="px-3">
+                  <div className="px-4">
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
                       src={AccessibilityIcon}
                       style={{ width: "300px" }}
                     />
-                    <div className="pt-3 text-center">
+                    <div className="pt-4 text-center">
                       <h5 className="title">
                         <span className="d-block mb-1">Accessibility</span>
                       </h5>

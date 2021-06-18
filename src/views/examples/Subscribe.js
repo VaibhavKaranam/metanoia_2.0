@@ -5,6 +5,7 @@ import classnames from "classnames";
 // reactstrap components
 import {
   Button,
+  Card,
   Container,
   Row,
   Col
@@ -47,13 +48,11 @@ class Subscribe extends React.Component {
                       <h1 className="display-3 text-white">
                         Subscribe to Our Newsletter{" "}
                       </h1>
-                      <p className="lead text-white">
-                        Status: Pending. Check back here for updates!
-                      </p>
                     </Col>
                   </Row>
                 </div>
               </Container>
+    
               {/* SVG separator */}
               <div className="separator separator-bottom separator-skew">
                 <svg
@@ -72,6 +71,19 @@ class Subscribe extends React.Component {
               </div>
             </section>
             {/* 1st Hero Variation */}
+
+            <section className="section">
+            <Container>
+              <Card className="card-profile shadow mt--300">
+                  <div className="text-center mt-2"> 
+                    <h4>
+                      Fill out the form below to receive personalized book recommendations!
+                    </h4>
+                    <iframe src="https://qfreeaccountssjc1.az1.qualtrics.com/jfe/form/SV_1AFALlunx5Un8Rn" width="700" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                  </div>
+              </Card>
+            </Container>
+            </section>
           </div>
           </main>
           <SimpleFooter />
