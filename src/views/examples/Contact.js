@@ -159,16 +159,18 @@ class Contact extends React.Component {
                 <Col className="order-md-3 px-10" md="3">
                   <div>
                     <h4>
-                              Email: metanoiabooks.co@gmail.com
+                      Email:
+                      <span> </span>
+                      <a href="metanoiabooks.co@gmail.com" target="blank">metanoiabooks.co@gmail.com</a>
                     </h4>
                     <h4>
-                                  Facebook: TBD
+                    <a href="https://www.linkedin.com/company/metanoiabooks/" target="blank">Linkedin</a>
                     </h4>
                     <h4>
-                                  LinkedIn: TBD
+                      <a href="https://www.facebook.com/MetanoiaLibrary/" target="blank">Facebook</a>
                     </h4>
                     <h4>
-                                  Twitter: TBD
+                                  Twitter: Coming soon!
                     </h4>
                   </div>
                 </Col>
