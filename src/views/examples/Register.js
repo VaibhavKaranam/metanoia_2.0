@@ -38,6 +38,10 @@ import {
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
+// images
+import GoogleImage from "assets/img/icons/common/google.svg";
+import GithubImage from "assets/img/icons/common/github.svg";
+
 class Register extends React.Component {
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -60,7 +64,7 @@ class Register extends React.Component {
               <span />
               <span />
             </div>
-            <Container className="pt-lg-7">
+            <Container className="">
               <Row className="justify-content-center">
                 <Col lg="5">
                   <Card className="bg-secondary shadow border-0">
@@ -78,10 +82,10 @@ class Register extends React.Component {
                           <span className="btn-inner--icon mr-1">
                             <img
                               alt="..."
-                              src={require("assets/img/icons/common/github.svg")}
+                              src={GithubImage}
                             />
                           </span>
-                          <span className="btn-inner--text">Github</span>
+                          <span className="btn-inner--text">Twitter</span>
                         </Button>
                         <Button
                           className="btn-neutral btn-icon ml-1"
@@ -92,7 +96,7 @@ class Register extends React.Component {
                           <span className="btn-inner--icon mr-1">
                             <img
                               alt="..."
-                              src={require("assets/img/icons/common/google.svg")}
+                              src={GoogleImage}
                             />
                           </span>
                           <span className="btn-inner--text">Google</span>
