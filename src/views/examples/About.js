@@ -35,7 +35,7 @@ class About extends React.Component {
         <main ref="main">
         <div className="position-relative">
             {/* shape Hero */}
-            <section className="section section-lg section-shaped pb-300">
+            <section className="section section-lg section-shaped pb-200">
               <div className="shape shape-style-1 shape-default">
               <img
                       alt="..."
