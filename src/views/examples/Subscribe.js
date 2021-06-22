@@ -31,16 +31,12 @@ class Subscribe extends React.Component {
             {/* shape Hero */}
             <section className="section section-lg section-shaped pb-250">
               <div className="shape shape-style-1 shape-default">
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-              </div>
+                <img
+                        alt="..."
+                        src={Banner}
+                        
+                      />
+                </div>
               <Container className="py-lg-md d-flex">
                 <div className="col px-0">
                   <Row>
