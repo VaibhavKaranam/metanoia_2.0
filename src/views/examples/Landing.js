@@ -114,7 +114,7 @@ class Landing extends React.Component {
                         <Button
                           className="btn-icon mb-3 mb-sm-0"
                           color="info"
-                          href="register-page"
+                          href="register"
                         >
                           <span className="btn-inner--text">Get Started</span>
                         </Button>
@@ -370,7 +370,7 @@ class Landing extends React.Component {
                       className="btn-icon"
                       color="success"
                       type="button"
-                      href="subscribe-page"
+                      href="subscribe"
                     >
                       <span className="nav-link-inner--text ml-1">
                         Sign Up Here
