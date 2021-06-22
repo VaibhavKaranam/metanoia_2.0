@@ -15,6 +15,7 @@ import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/CardsFooter.js";
 
 // images
+import Banner from "assets/img/theme/banner.png";
 import PlaceholderImage1 from "assets/img/theme/team-2-800x800.jpg";
 import PlaceholderImage2 from "assets/img/theme/team-3-800x800.jpg";
 import PlaceholderImage3 from "assets/img/theme/team-4-800x800.jpg";
@@ -32,19 +33,15 @@ class About extends React.Component {
       <>
         <DemoNavbar />
         <main ref="main">
-          <div className="position-relative">
+        <div className="position-relative">
             {/* shape Hero */}
-            <section className="section section-lg section-shaped pb-250">
+            <section className="section section-lg section-shaped pb-300">
               <div className="shape shape-style-1 shape-default">
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
+              <img
+                      alt="..."
+                      src={Banner}
+                      
+                    />
               </div>
               <Container className="py-lg-md d-flex">
                 <div className="col px-0">
