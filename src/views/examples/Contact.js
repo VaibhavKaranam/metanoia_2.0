@@ -22,6 +22,7 @@ import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/CardsFooter.js";
 
 // images and icons
+import Banner from "assets/img/theme/banner.png";
 
 class Contact extends React.Component {
   state = {};

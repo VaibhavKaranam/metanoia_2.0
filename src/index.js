@@ -37,33 +37,33 @@ ReactDOM.render(
     <Switch>
       <Route path="/" exact render={props => <Landing {...props} />} />
       <Route
-        path="/template-page"
+        path="/template"
         exact
         render={props => <Templates {...props} />}
       />
-      <Route path="/login-page" exact render={props => <Login {...props} />} />
+      <Route path="/login" exact render={props => <Login {...props} />} />
       <Route
-        path="/profile-page"
+        path="/profile"
         exact
         render={props => <Profile {...props} />}
       />
       <Route
-        path="/register-page"
+        path="/register"
         exact
         render={props => <Register {...props} />}
       />
       <Route
-        path="/about-page"
+        path="/about"
         exact
         render={props => <About {...props} />}
       />
       <Route
-        path="/contact-page"
+        path="/contact"
         exact
         render={props => <Contact {...props} />}
       />
       <Route
-        path="/subscribe-page"
+        path="/subscribe"
         exact
         render={props => <Subscribe {...props} />}
       />
