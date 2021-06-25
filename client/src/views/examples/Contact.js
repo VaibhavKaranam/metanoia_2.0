@@ -31,6 +31,10 @@ class Contact extends React.Component {
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
   }
+  onSubmit(e) {
+    e.preventDefault();
+    console.log('Button Pressed!');
+  }
   render() {
     return (
       <>
@@ -139,11 +143,12 @@ class Contact extends React.Component {
                       </FormGroup>
                       <div>
                         <Button
-                          block
+                          blocks
                           className="btn-round"
                           color="default"
                           size="lg"
                           type="button"
+                          onclick={this.onSubmit}
                         >
                           Send Message
                         </Button>
