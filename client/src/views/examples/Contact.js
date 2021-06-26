@@ -66,6 +66,18 @@ class Contact extends React.Component {
     console.log(this.state.name);
     console.log(this.state.email);
     console.log(this.state.message);
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: this.state.name,
+        email: this.state.email,
+        message: this.state.email
+      })
+    })
   }
 
   render() {
