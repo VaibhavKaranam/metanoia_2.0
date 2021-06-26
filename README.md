@@ -2,4 +2,4 @@
 
 #Instructions:
 use `npm install`
-use `npm start`
+and `npm start`
