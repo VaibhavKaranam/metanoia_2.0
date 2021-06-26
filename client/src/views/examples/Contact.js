@@ -25,16 +25,49 @@ import SimpleFooter from "components/Footers/CardsFooter.js";
 import Banner from "assets/img/theme/banner.png";
 
 class Contact extends React.Component {
-  state = {};
+
+  constructor(props, context) {
+    super(props, context);
+    this.onSubmit = this.onSubmit.bind(this);
+    this.state = {
+      name: "",
+      email: "",
+      message: ""
+    };
+  }
+
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
   }
-  onSubmit(e) {
+
+  updateName = async (e) => {
+    this.setState({
+      name: e.target.value
+    });
+  }
+
+  updateEmail = async (e) => {
+    this.setState({
+      email: e.target.value
+    });
+  }
+
+  updateMessage = async (e) => {
+    this.setState({
+      message: e.target.value
+    });
+  }
+
+  onSubmit = async (e) => {
     e.preventDefault();
     console.log('Button Pressed!');
+    console.log(this.state.name);
+    console.log(this.state.email);
+    console.log(this.state.message);
   }
+
   render() {
     return (
       <>
@@ -105,8 +138,10 @@ class Contact extends React.Component {
                             </InputGroupText>
                           </InputGroupAddon>
                           <Input
+                            value={this.state.name}
                             placeholder="Your name"
                             type="text"
+                            onChange={e => this.updateName(e)}
                             onFocus={e => this.setState({ nameFocused: true })}
                             onBlur={e => this.setState({ nameFocused: false })}
                           />
@@ -124,8 +159,10 @@ class Contact extends React.Component {
                             </InputGroupText>
                           </InputGroupAddon>
                           <Input
+                            value={this.state.email}
                             placeholder="Email address"
                             type="email"
+                            onChange={e => this.updateEmail(e)}
                             onFocus={e => this.setState({ emailFocused: true })}
                             onBlur={e => this.setState({ emailFocused: false })}
                           />
@@ -133,9 +170,11 @@ class Contact extends React.Component {
                       </FormGroup>
                       <FormGroup className="mb-4">
                         <Input
+                          value={this.message}
                           className="form-control-alternative"
                           cols="80"
                           name="name"
+                          onChange={e => this.updateMessage(e)}
                           placeholder="Type a message..."
                           rows="4"
                           type="textarea"
@@ -148,7 +187,7 @@ class Contact extends React.Component {
                           color="default"
                           size="lg"
                           type="button"
-                          onclick={this.onSubmit}
+                          onClick={this.onSubmit}
                         >
                           Send Message
                         </Button>
