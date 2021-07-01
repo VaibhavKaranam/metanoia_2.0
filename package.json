@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/creativetimofficial/argon-design-system-react/issues"
   },
-  "homepage": "https://metanoia-books.herokuapp.com",
+  "homepage": "https://metanoiabooks.herokuapp.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && gulp licenses",
