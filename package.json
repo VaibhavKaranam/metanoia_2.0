@@ -7,7 +7,7 @@
     "start": "node index.js",
     "frontend": "cd client && npm start",
     "dev": "concurrently --kill-others-on-fail \"npm run start\" \"npm run frontend\"",
-    "heroku-postbuild": "cd client && npm install && npm start",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Brett Woltz",
