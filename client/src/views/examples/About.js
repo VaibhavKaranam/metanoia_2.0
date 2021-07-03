@@ -15,7 +15,7 @@ import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/CardsFooter.js";
 
 // images
-import Banner from "assets/img/theme/banner.png";
+import Banner from "assets/img/theme/website-image.png";
 import PlaceholderImage1 from "assets/img/theme/team-2-800x800.jpg";
 import PlaceholderImage2 from "assets/img/theme/team-3-800x800.jpg";
 import PlaceholderImage3 from "assets/img/theme/team-4-800x800.jpg";

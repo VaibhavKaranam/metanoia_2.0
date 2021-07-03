@@ -29,7 +29,7 @@ import CardsFooter from "components/Footers/CardsFooter.js";
 import Download from "../IndexSections/Download.js";
 
 // images
-import Banner from "assets/img/theme/banner.png";
+import Banner from "assets/img/theme/anotherbanner.svg";
 import NewsletterImage from "assets/img/theme/newsletter.png";
 import AccessibilityIcon from "assets/img/icons/accessibility_icon.png";
 import ImpactIcon from "assets/img/icons/impact_icon.png";
