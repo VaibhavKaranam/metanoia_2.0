@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "metanoia back end",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesstsomethoughts/metanoiatest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/creativetimofficial/argon-design-system-react/issues"
+  },
+  "homepage": "https://metanoiabooks.herokuapp.com",
+  "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brett Woltz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
