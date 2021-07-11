@@ -16,7 +16,6 @@ import React, { useState } from "react";
 import {
   Button,
   Card,
-  CardHeader,
   CardBody,
   FormGroup,
   Form,
@@ -34,10 +33,6 @@ import {
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
-// images
-import GoogleImage from "assets/img/icons/common/google.svg";
-import GithubImage from "assets/img/icons/common/github.svg";
-import { createShorthandPropertyAssignment, isElementAccessExpression } from "typescript";
 
 const ForgotPassLayout = () => {
   const [codeRequested, setCodeRequested] = useState('emailContainer')
@@ -56,7 +51,6 @@ const ForgotPassLayout = () => {
       return(<VerificationCodeForm emailInput={emailInput} setCodeRequested={setCodeRequested} />)
     }
     else if(codeRequested === 'passContainer'){
-      console.log('yolo')
       return(<UpdatePass />)
     }
   }
