@@ -200,13 +200,20 @@ const UpdatePass = () => {
     //backend update / api
   }
 
+  const validPass = () => {
+    // certain passsword specifications such as min length must/contain nums/one cap letter etc. 
+    return true
+  }
+
+
   const submitForm = () => {
     //add some database serach request here as verification
     if (pass.trim().length === 0 || confirmPass.trim().length === 0) {
       setError('Missing field')
     } else if(!(pass===confirmPass)) {
       setError('Passwords dont match')
-    }else {
+    } else if(!validPass()){
+    } else {
       updatePassword()
       window.location = "login"
     }
