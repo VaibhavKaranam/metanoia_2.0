@@ -1,21 +1,16 @@
 /*!
-
 =========================================================
 * Argon Design System React - v1.1.0
 =========================================================
-
 * Product Page: https://www.creative-tim.com/product/argon-design-system-react
 * Copyright 2020 Creative Tim (https://www.creative-tim.com)
 * Licensed under MIT (https://github.com/creativetimofficial/argon-design-system-react/blob/master/LICENSE.md)
-
 * Coded by Creative Tim
-
 =========================================================
-
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
 */
-import React from "react";
+
+import React, { useState } from "react";
 
 // reactstrap components
 import {
@@ -29,6 +24,7 @@ import {
   InputGroupAddon,
   InputGroupText,
   InputGroup,
+  FormFeedback,
   Container,
   Row,
   Col
@@ -41,102 +37,220 @@ import SimpleFooter from "components/Footers/SimpleFooter.js";
 // images
 import GoogleImage from "assets/img/icons/common/google.svg";
 import GithubImage from "assets/img/icons/common/github.svg";
-import { isElementAccessExpression } from "typescript";
+import { createShorthandPropertyAssignment, isElementAccessExpression } from "typescript";
 
-class ForgotPassword extends React.Component {
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
+const ForgotPassLayout = () => {
+  const [codeRequested, setCodeRequested] = useState('emailContainer')
+  const [emailInput, setEmailInput] = useState('')
+  const requestCode = (email) => {
+    setEmailInput(email) // email for next container
+    setCodeRequested('codeContainer')
   }
 
-  verifyEmail(){
-    return true;
-  }
 
-  addCodeInput(){
-    if(true){
-
-      // var keyInput = '<FormGroup className="mb-3"> <InputGroup className="input-group-alternative"> <InputGroupAddon addonType="prepend"> <InputGroupText> <i className="ni ni-key-25" /> </InputGroupText> </InputGroupAddon> <Input placeholder="Code" type="text" /> </InputGroup> </FormGroup>';
-      // document.getElementById("inputCode").innerHTML += keyInput;
-      var inputGroup = document.createElement("InputGroup");
-      inputGroup.className = "input-group-alternative";
-      var input = document.createElement("Input");
-      inputGroup.appendChild(input);
-      document.getElementById("inputCode").appendChild(inputGroup);
-      console.log("hoolo");
-
-    } else {
-
+  const loadContainer = () => {
+    if(codeRequested === 'emailContainer'){
+      return (<ForgotPass requestCode={requestCode} />)
     }
-
-    // document.getElementById("codeReq")
+    else if(codeRequested === 'codeContainer'){
+      return(<VerificationCodeForm emailInput={emailInput} setCodeRequested={setCodeRequested} />)
+    }
+    else if(codeRequested === 'passContainer'){
+      console.log('yolo')
+      return(<UpdatePass />)
+    }
   }
 
-  render() {
-    return (
-      <>
-        <DemoNavbar />
-        <main ref="main">
-          <section className="section section-shaped section-lg">
-            <div className="shape shape-style-1 bg-gradient-default">
-              <span />
-              <span />
-              <span />
-              <span />
-              <span />
-              <span />
-              <span />
-              <span />
-            </div>
-            <Container>
-              <Row className="justify-content-center">
-                <Col lg="5">
-                  <Card className="bg-secondary shadow border-0">
-                    <CardBody className="px-lg-5 py-lg-5">
-                      <div className="text-center text-muted mb-4">
-                        <big className="font-weight-bold">Forgot Password</big><br/>
-                        <small>Enter Email</small>
-                      </div>
-                      <Form role="form">
-                        <FormGroup className="mb-3">
-                          <InputGroup className="input-group-alternative">
-                            <InputGroupAddon addonType="prepend">
-                              <InputGroupText>
-                                <i className="ni ni-email-83" />
-                              </InputGroupText>
-                            </InputGroupAddon>
-                            <Input placeholder="Email" type="email" />
-                          </InputGroup>                          
-                        </FormGroup>
-
-                        <FormGroup id="inputCode" className="mb-3">
-
-                        </FormGroup>
-
-                        <div className="text-center">
-                          <Button
-                            id="codeReq"
-                            className="my-4"
-                            color="primary"
-                            type="button"
-                            onClick={this.addCodeInput}
-                          >
-                            Request Code
-                          </Button>
-                        </div>
-                      </Form>
-                    </CardBody>
-                  </Card>
-                </Col>
-              </Row>
-            </Container>
-          </section>
-        </main>
-        <SimpleFooter />
-      </>
-    );
-  }
+  return (
+    <>
+      <DemoNavbar />
+      <main>
+        <section className="section section-shaped section-lg">
+          <div className="shape shape-style-1 bg-gradient-default">
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+          <Container>
+            <Row className="justify-content-center">
+              <Col lg="5">
+                <Card className="bg-secondary shadow border-0">
+                  <CardBody className="px-lg-5 py-lg-5">
+                    {
+                      loadContainer()
+                    }
+                  </CardBody>
+                </Card>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+      </main>
+      <SimpleFooter />
+    </>
+  )
 }
 
-export default ForgotPassword;
+const ForgotPass = ({ requestCode }) => {
+  const [email, setEmail] = useState('')
+  const [error, setError] = useState(null)
+
+  const submitForm = () => {
+    //add some database serach request here as verification
+    if (email.trim().length === 0) {
+      setError('Please enter email')
+    } else if(!email.includes('@')) {
+      setError('Please enter email')
+    }else {
+      requestCode(email)
+    }
+  }
+
+  return (
+    <div>
+      <div className="text-center text-muted mb-4">
+        <h4 className="font-weight-bold">Forgot Password</h4>
+        <small>Enter Email</small>
+      </div>
+      <Form role="form" onSubmit={submitForm}>
+        <FormGroup className="mb-3">
+          <InputGroup className="input-group-alternative">
+            <InputGroupAddon addonType="prepend">
+              <InputGroupText>
+                <i className="ni ni-email-83" />
+              </InputGroupText>
+            </InputGroupAddon>
+            <Input invalid={!!error} placeholder="Email" type="email" defaultValue={email}
+              onChange={(e) => setEmail(e.target.value)} />
+            <FormFeedback tooltip className="mt-1">{error}</FormFeedback>
+          </InputGroup>
+
+        </FormGroup>
+
+        <div className="text-center">
+          <Button
+            id="codeReq"
+            className="my-4"
+            color="primary"
+            type="button"
+            onClick={submitForm}
+          >
+            Request Code
+          </Button>
+        </div>
+      </Form>
+    </div>
+  )
+}
+
+const VerificationCodeForm = ({ emailInput, setCodeRequested }) => {
+  const [code, setCode] = useState('')
+  const [error, setError] = useState(null)
+
+  const submitForm = () => {
+    //add some database serach request here as verification
+    if (code.trim().length === 0) {
+      setError('Please enter your code')
+    } else {
+      setCodeRequested('passContainer')
+      ///window.location.href="login";
+    }
+  }
+
+  return (
+    <div>
+      <div className="text-center text-muted mb-4">
+        <h4 className="font-weight-bold">Verify Code</h4>
+        <small>{`Please enter the code that was sent to ${emailInput}.`}</small>
+      </div>
+      <Form role="form" onSubmit={submitForm}>
+        <FormGroup className="mb-3">
+          <InputGroup className="input-group-alternative">
+            <InputGroupAddon addonType="prepend">
+              <InputGroupText>
+                <i className="ni ni-key-25" />
+              </InputGroupText>
+            </InputGroupAddon>
+            <Input invalid={!!error} placeholder="Verification Code" type="text" onChange={(e) => setCode(e.target.value)} />
+            <FormFeedback tooltip className="mt-1">{error}</FormFeedback>
+          </InputGroup>
+        </FormGroup>
+
+        <div className="text-center">
+          <Button
+            id="codeReq"
+            className="my-4"
+            color="primary"
+            type="button"
+            onClick={submitForm}
+          >
+            Verify
+          </Button>
+        </div>
+      </Form>
+    </div>
+  )
+}
+
+const UpdatePass = () => {
+  const [pass, setPass] = useState('')
+  const [confirmPass, setConfirmPass] = useState('')
+  const [error, setError] = useState(null)
+
+  const updatePassword = () => {
+    //backend update / api
+  }
+
+  const submitForm = () => {
+    //add some database serach request here as verification
+    if (pass.trim().length === 0 || confirmPass.trim().length === 0) {
+      setError('Missing field')
+    } else if(!(pass===confirmPass)) {
+      setError('Passwords dont match')
+    }else {
+      updatePassword()
+      window.location = "login"
+    }
+  }
+
+  return (
+    <div>
+      <div className="text-center text-muted mb-4">
+        <h4 className="font-weight-bold">Update Password</h4>
+        <small>Enter a new password.</small>
+      </div>
+      <Form role="form" onSubmit={submitForm}>
+        <FormGroup className="mb-3">
+          <InputGroup className="input-group-alternative">
+            <Input placeholder="Password" type="password"
+              onChange={(e) => setPass(e.target.value)} />
+          </InputGroup>
+          <InputGroup className="input-group-alternative mt-3">
+            <Input invalid={!!error} placeholder="Confirm Password" type="password"
+              onChange={(e) => setConfirmPass(e.target.value)} />
+            <FormFeedback tooltip className="mt-3">{error}</FormFeedback>
+          </InputGroup>
+        </FormGroup>
+
+        <div className="text-center">
+          <Button
+            id="codeReq"
+            className="mt-5 mb-4"
+            color="primary"
+            type="button"
+            onClick={submitForm}
+          >
+            Update
+          </Button>
+        </div>
+      </Form>
+    </div>
+  )
+}
+
+export default ForgotPassLayout;
