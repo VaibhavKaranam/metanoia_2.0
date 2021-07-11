@@ -56,7 +56,6 @@ const ForgotPassLayout = () => {
       return(<VerificationCodeForm emailInput={emailInput} setCodeRequested={setCodeRequested} />)
     }
     else if(codeRequested === 'passContainer'){
-      console.log('yolo')
       return(<UpdatePass />)
     }
   }
