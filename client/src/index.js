@@ -31,6 +31,8 @@ import Register from "views/examples/Register.js";
 import About from "views/examples/About.js";
 import Contact from "views/examples/Contact.js";
 import Subscribe from "views/examples/Subscribe.js";
+import ForgotPassword from "views/examples/ForgotPassword.js";
+
 
 ReactDOM.render(
   <BrowserRouter>
@@ -66,6 +68,11 @@ ReactDOM.render(
         path="/subscribe"
         exact
         render={props => <Subscribe {...props} />}
+      />
+      <Route
+        path="/resetpassword"
+        exact
+        render={props => <ForgotPassword {...props} />}
       />
       <Redirect to="/" />
     </Switch>
