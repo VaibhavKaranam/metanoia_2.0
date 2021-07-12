@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React, {useState} from "react";
 
 // reactstrap components
 import {
@@ -41,13 +41,65 @@ import SimpleFooter from "components/Footers/SimpleFooter.js";
 // images
 import GoogleImage from "assets/img/icons/common/google.svg";
 import GithubImage from "assets/img/icons/common/github.svg";
+import { setTokenSourceMapRange } from "typescript";
 
 class Register extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      name: "",
+      email: "",
+      password: ""
+    }
+    this.onSubmit = this.onSubmit.bind(this);
+
+  }
+
   componentDidMount() {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     this.refs.main.scrollTop = 0;
   }
+
+  setName = async (e) => {
+    this.setState({
+      name: e
+    });
+  }
+
+  setEmail = async (e) => {
+    this.setState({
+      email: e
+    });
+  }
+
+  setPassword = async (e) => {
+    this.setState({
+      password: e
+    });
+  }
+
+  onSubmit(){
+    
+    const options = {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        'name': this.state.name,
+        'email': this.state.email,
+        'message': this.state.password
+      })
+    }
+
+    fetch('/api/register', options)
+    //.then(res => console.log(res))
+    .catch(error => console.log(error))
+
+  }
+
   render() {
     return (
       <>
@@ -107,7 +159,7 @@ class Register extends React.Component {
                       <div className="text-center text-muted mb-4">
                         <small>Or sign up with credentials</small>
                       </div>
-                      <Form role="form">
+                      <Form role="form" onSubmit={this.onSubmit}>
                         <FormGroup>
                           <InputGroup className="input-group-alternative mb-3">
                             <InputGroupAddon addonType="prepend">
@@ -115,7 +167,7 @@ class Register extends React.Component {
                                 <i className="ni ni-hat-3" />
                               </InputGroupText>
                             </InputGroupAddon>
-                            <Input placeholder="Name" type="text" />
+                            <Input placeholder="Name" type="text" onChange={(e)=>this.setName(e.target.value)} />
                           </InputGroup>
                         </FormGroup>
                         <FormGroup>
@@ -125,7 +177,7 @@ class Register extends React.Component {
                                 <i className="ni ni-email-83" />
                               </InputGroupText>
                             </InputGroupAddon>
-                            <Input placeholder="Email" type="email" />
+                            <Input placeholder="Email" type="email" onChange={(e)=>this.setEmail(e.target.value)} />
                           </InputGroup>
                         </FormGroup>
                         <FormGroup>
@@ -139,6 +191,7 @@ class Register extends React.Component {
                               placeholder="Password"
                               type="password"
                               autoComplete="off"
+                              onChange={(e)=>this.setPassword(e.target.value)}
                             />
                           </InputGroup>
                         </FormGroup>
@@ -180,6 +233,7 @@ class Register extends React.Component {
                             className="mt-4"
                             color="primary"
                             type="button"
+                            onClick={this.onSubmit}
                           >
                             Create account
                           </Button>

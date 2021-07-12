@@ -44,14 +44,14 @@ const ForgotPassLayout = () => {
 
 
   const loadContainer = () => {
-    if(codeRequested === 'emailContainer'){
+    if (codeRequested === 'emailContainer') {
       return (<ForgotPass requestCode={requestCode} />)
     }
-    else if(codeRequested === 'codeContainer'){
-      return(<VerificationCodeForm emailInput={emailInput} setCodeRequested={setCodeRequested} />)
+    else if (codeRequested === 'codeContainer') {
+      return (<VerificationCodeForm emailInput={emailInput} setCodeRequested={setCodeRequested} />)
     }
-    else if(codeRequested === 'passContainer'){
-      return(<UpdatePass />)
+    else if (codeRequested === 'passContainer') {
+      return (<UpdatePass />)
     }
   }
 
@@ -98,9 +98,9 @@ const ForgotPass = ({ requestCode }) => {
     //add some database serach request here as verification
     if (email.trim().length === 0) {
       setError('Please enter email')
-    } else if(!email.includes('@')) {
+    } else if (!email.includes('@')) {
       setError('Please enter email')
-    }else {
+    } else {
       requestCode(email)
     }
   }
@@ -210,9 +210,9 @@ const UpdatePass = () => {
     //add some database serach request here as verification
     if (pass.trim().length === 0 || confirmPass.trim().length === 0) {
       setError('Missing field')
-    } else if(!(pass===confirmPass)) {
+    } else if (!(pass === confirmPass)) {
       setError('Passwords dont match')
-    } else if(!validPass()){
+    } else if (!validPass()) {
     } else {
       updatePassword()
       window.location = "login"
