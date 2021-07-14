@@ -39,7 +39,7 @@ import {
   UncontrolledTooltip
 } from "reactstrap";
 
-import Logo from "public/favicon_io/apple-touch-icon.png";
+import Logo from "assets/img/brand/metanoia_newlogo.png";
 
 class DemoNavbar extends React.Component {
   componentDidMount() {
