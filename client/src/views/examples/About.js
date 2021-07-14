@@ -16,6 +16,9 @@ import SimpleFooter from "components/Footers/CardsFooter.js";
 
 // images
 import Banner from "assets/img/theme/website-image.png";
+import AsthaImage from "assets/img/theme/astha.JPG";
+import JessImage from "assets/img/theme/jessica.JPG";
+import TanveeImage from "assets/img/theme/tanvee.JPG";
 import PlaceholderImage1 from "assets/img/theme/team-2-800x800.jpg";
 import PlaceholderImage2 from "assets/img/theme/team-3-800x800.jpg";
 import PlaceholderImage3 from "assets/img/theme/team-4-800x800.jpg";
@@ -92,7 +95,7 @@ class About extends React.Component {
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={PlaceholderImage1}
+                      src={AsthaImage}
                       style={{ width: "300px" }}
                     />
                     <div className="pt-4 text-center">
@@ -110,7 +113,7 @@ class About extends React.Component {
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={PlaceholderImage2}
+                      src={JessImage}
                       style={{ width: "300px" }}
                     />
                     <div className="pt-4 text-center">
@@ -129,7 +132,7 @@ class About extends React.Component {
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={PlaceholderImage3}
+                      src={TanveeImage}
                       style={{ width: "300px" }}
                     />
                     <div className="pt-4 text-center">
@@ -167,7 +170,7 @@ class About extends React.Component {
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={PlaceholderImage2}
+                      src={PlaceholderImage1}
                       style={{ width: "300px" }}
                     />
                     <div className="pt-4 text-center">
