@@ -16,7 +16,7 @@ import DemoNavbar from "components/Navbars/DemoNavbar.js";
 import SimpleFooter from "components/Footers/CardsFooter.js";
 
 // images
-import Banner from "assets/img/theme/banner.png";
+import Banner from "assets/img/theme/website-image.png";
 
 class Subscribe extends React.Component {
   state = {};
