@@ -96,7 +96,7 @@ class DemoNavbar extends React.Component {
                       <Link to="/">
                         <img
                           alt="..."
-                          src={require("assets/img/brand/argon-react.png")}
+                          src={Logo}
                         />
                       </Link>
                     </Col>
@@ -109,28 +109,25 @@ class DemoNavbar extends React.Component {
                   </Row>
                 </div>
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
+                <NavItem>
+                    <NavLink
+                      className="nav-link-icon"
+                      href="landing"
+                      id="tooltip333589074"
+                    >
+                      <i className="ni ni-bold-right d-lg-none mr-1" />
+                      <span className="nav-link-inner--text">Home</span>
+                    </NavLink>
+                  </NavItem>
                   <NavItem>
                     <NavLink
                       className="nav-link-icon"
                       href="about"
                       id="tooltip333589074"
                     >
-                      <i className="ni ni-ui-04 d-lg-none mr-1" />
+                      <i className="ni ni-bold-right d-lg-none mr-1" />
                       <span className="nav-link-inner--text">About</span>
                     </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      className="nav-link-icon"
-                      href="subscribe"
-                      id="tooltip356693867"
-                    >
-                      <i className="ni ni-ui-04 d-lg-none mr-1" />
-                      <span className="nav-link-inner--text">Subscribe</span>
-                    </NavLink>
-                    {/* <UncontrolledTooltip delay={0} target="tooltip356693867">
-                      Follow us on Instagram
-                    </UncontrolledTooltip> */}
                   </NavItem>
                   <NavItem>
                     <NavLink
@@ -138,18 +135,28 @@ class DemoNavbar extends React.Component {
                       href="contact"
                       id="tooltip184698705"
                     >
-                      <i className="ni ni-ui-04 d-lg-none mr-1" />
+                      <i className="ni ni-bold-right d-lg-none mr-1" />
                       <span className="nav-link-inner--text">Contact</span>
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      className="nav-link-icon"
+                      href="login"
+                      id="tooltip356693867"
+                    >
+                      <i className="ni ni-bold-right d-lg-none mr-1" />
+                      <span className="nav-link-inner--text">Log In</span>
                     </NavLink>
                   </NavItem>
                   <NavItem className="d-lg-block ml-lg-4">
                     <Button
                       className="btn-neutral btn-icon"
                       color="default"
-                      href="login"
+                      href="subscribe"
                     >
                       <span className="nav-link-inner--text ml-1">
-                        Log In
+                        Subscribe
                       </span>
                     </Button>
                   </NavItem>
