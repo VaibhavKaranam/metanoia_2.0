@@ -71,11 +71,11 @@ class Profile extends React.Component {
                     <Col className="order-lg-2" lg="3">
                       <div className="card-profile-image">
                         <a href="#pablo" onClick={e => e.preventDefault()}>
-                          <img
+                          {/* <img
                             alt="..."
                             className="rounded-circle"
                             src={require("assets/img/theme/team-4-800x800.jpg")}
-                          />
+                          /> */}
                         </a>
                       </div>
                     </Col>

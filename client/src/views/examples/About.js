@@ -19,10 +19,9 @@ import Banner from "assets/img/theme/website-image.png";
 import AsthaImage from "assets/img/theme/astha.JPG";
 import JessImage from "assets/img/theme/jessica.JPG";
 import TanveeImage from "assets/img/theme/tanvee.JPG";
-import PlaceholderImage1 from "assets/img/theme/team-2-800x800.jpg";
-import PlaceholderImage2 from "assets/img/theme/team-3-800x800.jpg";
-import PlaceholderImage3 from "assets/img/theme/team-4-800x800.jpg";
-import PlaceholderImage4 from "assets/img/theme/team-1-800x800.jpg";
+import JoyceImage from "assets/img/theme/joyce.jpg";
+import CassidyImage from "assets/img/theme/cassidy.png";
+import BrettImage from "assets/img/theme/brett.png";
 
 class About extends React.Component {
   state = {};
@@ -152,7 +151,7 @@ class About extends React.Component {
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={PlaceholderImage1}
+                      src={CassidyImage}
                       style={{ width: "300px" }}
                     />
                     <div className="pt-4 text-center">
@@ -170,7 +169,7 @@ class About extends React.Component {
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={PlaceholderImage1}
+                      src={JoyceImage}
                       style={{ width: "300px" }}
                     />
                     <div className="pt-4 text-center">
@@ -189,7 +188,7 @@ class About extends React.Component {
                     <img
                       alt="..."
                       className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={PlaceholderImage4}
+                      src={BrettImage}
                       style={{ width: "300px" }}
                     />
                     <div className="pt-4 text-center">

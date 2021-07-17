@@ -222,9 +222,9 @@ class Contact extends React.Component {
                     <h4>
                       <a href="https://www.facebook.com/MetanoiaLibrary/" target="blank">Facebook</a>
                     </h4>
-                    <h4>
+                    {/* <h4>
                                   Twitter: Coming soon!
-                    </h4>
+                    </h4> */}
                   </div>
                 </Col>
                 </Row>
