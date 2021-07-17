@@ -41,7 +41,6 @@ import SimpleFooter from "components/Footers/SimpleFooter.js";
 // images
 import GoogleImage from "assets/img/icons/common/google.svg";
 import GithubImage from "assets/img/icons/common/github.svg";
-import { setTokenSourceMapRange } from "typescript";
 
 class Register extends React.Component {
   constructor(props) {
