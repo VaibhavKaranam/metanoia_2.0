@@ -36,6 +36,7 @@ import {
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
+import CardsFooter from "components/Footers/CardsFooter.js"
 import SimpleFooter from "components/Footers/SimpleFooter.js";
 
 // images
@@ -53,8 +54,9 @@ class Login extends React.Component {
       <>
         <DemoNavbar />
         <main ref="main">
-          <section className="section section-shaped section-lg">
-            <div className="shape shape-style-1 bg-gradient-default">
+          <section style={{backgroundColor: '#505F98'}} className="section section-shaped section-lg">
+            <div >
+            {/* <div className="shape shape-style-1 bg-gradient-default"> */}
               <span />
               <span />
               <span />
@@ -73,7 +75,7 @@ class Login extends React.Component {
                   <Card className="bg-secondary shadow border-0">
                     <CardHeader className="bg-white pb-5">
                       <div className="text-muted text-center mb-3">
-                        <small>Sign in with</small>
+                        <small id="signIn">Sign in with</small>
                       </div>
                       <div className="btn-wrapper text-center">
                         <Button
@@ -185,7 +187,7 @@ class Login extends React.Component {
             </Container>
           </section>
         </main>
-        <SimpleFooter />
+        <CardsFooter />
       </>
     );
   }

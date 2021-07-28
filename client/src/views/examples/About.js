@@ -23,6 +23,9 @@ import JoyceImage from "assets/img/theme/joyce.jpg";
 import CassidyImage from "assets/img/theme/cassidy.png";
 import BrettImage from "assets/img/theme/brett.png";
 
+// css
+import './about.css';
+
 class About extends React.Component {
   state = {};
   componentDidMount() {
@@ -49,7 +52,7 @@ class About extends React.Component {
                 <div className="col px-0">
                   <Row>
                     <Col lg="0">
-                      <h1 className="display-3 text-white">
+                      <h1 id="heading" className="display-3 text-white">
                         About Us{" "}
                       </h1>
                       <p className="lead text-white">
@@ -64,7 +67,7 @@ class About extends React.Component {
                 </div>
               </Container>
               {/* SVG separator */}
-              <div className="separator separator-bottom separator-skew">
+              {/* <div className="separator separator-bottom separator-skew">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   preserveAspectRatio="none"
@@ -78,14 +81,14 @@ class About extends React.Component {
                     points="2560 0 2560 100 0 100"
                   />
                 </svg>
-              </div>
+              </div> */}
             </section>
             {/* Founder Intros */}
-            <section className="section section-lg">
+            <section style={{backgroundColor: '#FCFAD9'}} className="section section-lg">
             <Container>
               <Row className="justify-content-center text-center mb-lg">
                 <Col lg="8">
-                  <h2 className="display-3">Our Team</h2>
+                  <h2 id="heading" className="display-3">Our Team</h2>
                 </Col>
               </Row>
               <Row className="justify-content-center text-center mb-lg">
