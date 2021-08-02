@@ -26,6 +26,9 @@ import "./Contact.css";
 // images and icons
 import Banner from "assets/img/theme/banner.png";
 
+// css
+import './Contact.css'; 
+
 class Contact extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -96,10 +99,7 @@ class Contact extends React.Component {
                 <div className="col px-0">
                   <Row>
                     <Col lg="0">
-                      <h1
-                        className="display-3 text-white"
-                        style={{ margin: 15 }}
-                      >
+                      <h1 id="heading" className="display-3 text">
                         Contact Us{" "}
                       </h1>
                       {/* <p className="lead text-white">
@@ -110,7 +110,7 @@ class Contact extends React.Component {
                 </div>
               </Container>
               {/* SVG separator */}
-              <div className="separator separator-bottom separator-skew">
+              {/* <div className="separator separator-bottom separator-skew">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   preserveAspectRatio="none"
@@ -124,17 +124,17 @@ class Contact extends React.Component {
                     points="2560 0 2560 100 0 100"
                   />
                 </svg>
-              </div>
+              </div> */}
             </section>
             {/* 1st Hero Variation */}
           </div>
-          <section className="section section-lg pt-lg-0 section-contact-us">
+          <section style={{backgroundColor: '#FCFAD9'}} className="section section-lg pt-lg-0 section-contact-us">
             <Container>
               <Row className="justify-content-left">
                 <Col className="order-md-1  mt--200" md="8">
                   <Card className="bg-gradient-secondary shadow">
                     <CardBody className="p-lg-5">
-                      <h4 className="mb-1">Want to learn more?</h4>
+                      <h4 id="heading" className="mb-1">Want to learn more?</h4>
                       <p className="mt-0">
                         We care about your input and experiences.
                       </p>
@@ -217,7 +217,9 @@ class Contact extends React.Component {
                 </Col>
                 <Col className="order-md-2" xs="1"></Col>
                 <Col className="order-md-3 px-10" md="3">
-                  <div>
+                  <div id="heading">
+                    <br></br>
+                    <br></br>
                     <h4>
                       Email:
                       <span> </span>

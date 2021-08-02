@@ -39,6 +39,9 @@ import Testimonial1 from "assets/img/theme/testimonial1.svg";
 import Testimonial2 from "assets/img/theme/testimonial2.svg";
 import Testimonial3 from "assets/img/theme/testimonial3.svg";
 
+// css
+import './landing.css';
+
 const items = [
   {
     src: Testimonial1,
@@ -92,17 +95,19 @@ class Landing extends React.Component {
                 <div className="col px-0">
                   <Row>
                     <Col lg="6">
-                      <h1 className="display-3 text-white">Metanoia </h1>
-                      <p className="lead text-white">
+                      <h1 id="mainTitle" className="display-3 ">
+                        Metanoia{" "}
+                      </h1>
+                      <p id="secondaryText" className="lead">
                         The digital library that inspires conversations
                       </p>
                       <div className="btn-wrapper">
                         <Button
                           className="btn-icon mb-3 mb-sm-0"
-                          color="info"
+                          id="getStartedBtn"
                           href="register"
                         >
-                          <span className="btn-inner--text">Get Started</span>
+                          <span id="getStartedText" className="btn-inner--text">Get Started</span>
                         </Button>
                       </div>
                     </Col>
@@ -128,7 +133,16 @@ class Landing extends React.Component {
             </section>
             {/* 1st Hero Variation */}
           </div>
-          <section className="section section-lg pt-lg-0 mt--200">
+          <section style={{backgroundColor: '#FCFAD9'}} className="section section-lg pt-lg-0 mt--200">
+          <br></br>
+          <br></br>
+          <Container>
+          {/* <Row className="justify-content-center text-center mb-lg"> */}
+
+                  <h2 id="sectionHeading" style={{textAlign: 'center'}} className="display-3">Recommended Topics</h2>
+                  <br></br>
+              {/* </Row> */}
+            </Container>
             <Container>
               <Row className="justify-content-center">
                 <Col lg="12">
@@ -355,7 +369,7 @@ class Landing extends React.Component {
               </Row>
             </Container>
           </section>
-          <section className="section section-lg">
+          <section style={{ backgroundColor: '#FCFAD9'}} className="section section-lg">
             <Container>
               <Row className="row-grid align-items-center">
                 <Col className="order-md-2" md="6">
@@ -370,16 +384,15 @@ class Landing extends React.Component {
                     <div className="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
                       <i className="ni ni-settings-gear-65" />
                     </div>
-                    <h3>Sign up for our personalized newsletter!</h3>
+                    <h3 id="signUpTitle">Sign up for our personalized newsletter!</h3>
                     <p>
                       A curated book recommendations list every month based on
                       your preferences, just for you!
                     </p>
                     <Button
                       className="btn-icon"
-                      color="success"
-                      type="button"
                       href="subscribe"
+                      id="subscribeBtn"
                     >
                       <span className="nav-link-inner--text ml-1">
                         Sign Up Here
@@ -390,11 +403,11 @@ class Landing extends React.Component {
               </Row>
             </Container>
           </section>
-          <section className="section section-lg">
+          <section style={{ backgroundColor: '#FCFAD9'}} className="section section-lg">
             <Container>
               <Row className="justify-content-center text-center mb-lg">
                 <Col lg="8">
-                  <h2 className="display-3">What We Believe In</h2>
+                  <h2 id="sectionHeading" className="display-3">What we believe in?</h2>
                 </Col>
               </Row>
               <Row>
@@ -408,7 +421,7 @@ class Landing extends React.Component {
                     />
                     <div className="pt-4 text-center">
                       <h5 className="title">
-                        <span className="d-block mb-1">Accessibility</span>
+                        <span id="beliefs" className="d-block mb-1">Accessibility</span>
                       </h5>
                     </div>
                   </div>
@@ -423,7 +436,7 @@ class Landing extends React.Component {
                     />
                     <div className="pt-4 text-center">
                       <h5 className="title">
-                        <span className="d-block mb-1">Social Impact</span>
+                        <span id="beliefs" className="d-block mb-1">Social Impact</span>
                       </h5>
                     </div>
                   </div>
@@ -439,7 +452,7 @@ class Landing extends React.Component {
                     />
                     <div className="pt-4 text-center">
                       <h5 className="title">
-                        <span className="d-block mb-1">Bias Prevention</span>
+                        <span id="beliefs" className="d-block mb-1">Bias Prevention</span>
                       </h5>
                     </div>
                   </div>
@@ -447,12 +460,13 @@ class Landing extends React.Component {
               </Row>
             </Container>
           </section>
-          <section className="section section-lg bg-gradient-default">
+          <section style={{backgroundColor: '#FCFAD9'}} className="section section-lg ">
+          {/* section section-lg bg-gradient-default */}
             <Container className="pb-300">
               <Row className="text-center justify-content-center">
                 <Col lg="10">
-                  <h2 className="display-3 text-white">Testimonials</h2>
-                  <p className="lead text-white">
+                  <h2 id="sectionHeading" className="display-3 text">Testimonials</h2>
+                  <p id="beliefs" className="lead text">
                     Read below for what our customers had to say.
                   </p>
                 </Col>
@@ -484,7 +498,7 @@ class Landing extends React.Component {
                 <Col lg="8">
                   <Card className="bg-gradient-secondary shadow">
                     <CardBody className="p-lg-5">
-                      <h4 className="mb-1">Want to learn more?</h4>
+                      <h4 id="sectionHeading" className="mb-1">Want to learn more?</h4>
                       <p className="mt-0">
                         We care about your input and experiences.
                       </p>

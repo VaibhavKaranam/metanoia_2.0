@@ -1,0 +1,13 @@
+#navbar-main {
+    color: white;
+}
+
+.headroom--top a {
+    color: #fff;
+  }
+  
+  .headroom--not-top {
+    background: rgba(255, 255, 255, 0.8);
+    will-change: rgba(255, 255, 255, 0.8);
+    transition: rgba(255, 255, 255, 0.8) 1s;
+  }

@@ -39,7 +39,7 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-import Logo from "assets/img/brand/metanoia_newlogo.png";
+import Logo from "assets/img/brand/header_logo.png";
 
 class DemoNavbar extends React.Component {
   componentDidMount() {
@@ -102,7 +102,9 @@ class DemoNavbar extends React.Component {
       <>
         <header className="header-global">
           <Navbar
-            className="navbar-main navbar-transparent navbar-light headroom"
+            style={{backgroundColor:'#AC3791 !important' , width: '100%'}}
+            className="navbar-main navbar-transparent navbar-light"
+            // className="navbar-main navbar-transparent navbar-light "
             expand="lg"
             id="navbar-main"
           >
@@ -124,7 +126,11 @@ class DemoNavbar extends React.Component {
                   <Row>
                     <Col className="collapse-brand" xs="6">
                       <Link to="/">
-                        <img alt="..." src={Logo} />
+                        <img
+                          alt="..."
+                          src={Logo}
+                          id="navBarLogo"
+                        />
                       </Link>
                     </Col>
                     <Col className="collapse-close" xs="6">

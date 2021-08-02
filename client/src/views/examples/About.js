@@ -11,11 +11,14 @@ import SimpleFooter from "components/Footers/CardsFooter.js";
 // images
 import Banner from "assets/img/theme/website-image.png";
 import AsthaImage from "assets/img/theme/astha.JPG";
-import JessImage from "assets/img/theme/jessica.JPG";
+import JessImage from "assets/img/theme/jessica.png";
 import TanveeImage from "assets/img/theme/tanvee.JPG";
 import JoyceImage from "assets/img/theme/joyce.jpg";
 import CassidyImage from "assets/img/theme/cassidy.png";
 import BrettImage from "assets/img/theme/brett.png";
+
+// css
+import './about.css';
 
 class About extends React.Component {
   state = {};
@@ -39,10 +42,7 @@ class About extends React.Component {
                 <div className="col px-0">
                   <Row>
                     <Col lg="0">
-                      <h1
-                        className="display-3 text-white"
-                        style={{ margin: 15 }}
-                      >
+                      <h1 id="heading" className="display-3 text-white">
                         About Us{" "}
                       </h1>
                       <p className="lead text-white" style={{ margin: 15 }}>
@@ -60,7 +60,7 @@ class About extends React.Component {
                 </div>
               </Container>
               {/* SVG separator */}
-              <div className="separator separator-bottom separator-skew">
+              {/* <div className="separator separator-bottom separator-skew">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   preserveAspectRatio="none"
@@ -74,33 +74,32 @@ class About extends React.Component {
                     points="2560 0 2560 100 0 100"
                   />
                 </svg>
-              </div>
+              </div> */}
             </section>
             {/* Founder Intros */}
-            <section className="section section-lg">
-              <Container>
-                <Row className="justify-content-center text-center mb-lg">
-                  <Col lg="8">
-                    <h2 className="display-3">Our Team</h2>
-                  </Col>
-                </Row>
-                <Row className="justify-content-center text-center mb-lg">
-                  <Col className="mb-4 mb-lg-0" md="4">
-                    <div className="px-4">
-                      <img
-                        alt="..."
-                        className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                        src={AsthaImage}
-                        style={{ width: "300px" }}
-                      />
-                      <div className="pt-4 text-center">
-                        <h5 className="title">
-                          <span className="d-block mb-1">Astha Rai</span>
-                        </h5>
-                        <h6 className="title">
-                          <span className="d-block mb-10">Co-Founder</span>
-                        </h6>
-                      </div>
+            <section style={{backgroundColor: '#FCFAD9'}} className="section section-lg">
+            <Container>
+              <Row className="justify-content-center text-center mb-lg">
+                <Col lg="8">
+                  <h2 id="heading" className="display-3">Our Team</h2>
+                </Col>
+              </Row>
+              <Row className="justify-content-center text-center mb-lg">
+                <Col className="mb-4 mb-lg-0" md="4">
+                  <div className="px-4">
+                    <img
+                      alt="..."
+                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                      src={AsthaImage}
+                      style={{ width: "300px" }}
+                    />
+                    <div className="pt-4 text-center">
+                      <h5 className="title">
+                        <span className="d-block mb-1">Astha Rai</span>
+                      </h5>
+                      <h6 className="title">
+                        <span className="d-block mb-10">Co-Founder</span>
+                      </h6>
                     </div>
                   </Col>
                   <Col className="mb-4 mb-lg-0" md="4">
