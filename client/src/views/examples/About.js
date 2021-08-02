@@ -17,7 +17,7 @@ import SimpleFooter from "components/Footers/CardsFooter.js";
 // images
 import Banner from "assets/img/theme/website-image.png";
 import AsthaImage from "assets/img/theme/astha.JPG";
-import JessImage from "assets/img/theme/jessica.JPG";
+import JessImage from "assets/img/theme/jessica.png";
 import TanveeImage from "assets/img/theme/tanvee.JPG";
 import JoyceImage from "assets/img/theme/joyce.jpg";
 import CassidyImage from "assets/img/theme/cassidy.png";
