@@ -31,7 +31,7 @@ import {
   InputGroup,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 // core components
@@ -78,31 +78,27 @@ class Login extends React.Component {
                         <small id="signIn">Sign in with</small>
                       </div>
                       <div className="btn-wrapper text-center">
+                        {/*
                         <Button
                           className="btn-neutral btn-icon"
                           color="default"
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <span className="btn-inner--icon mr-1">
-                            <img
-                              alt="..."
-                              src={GithubImage}
-                            />
+                            <img alt="..." src={GithubImage} />
                           </span>
                           <span className="btn-inner--text">Twitter</span>
                         </Button>
+            */}
                         <Button
                           className="btn-neutral btn-icon ml-1"
                           color="default"
                           href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          onClick={(e) => e.preventDefault()}
                         >
                           <span className="btn-inner--icon mr-1">
-                            <img
-                              alt="..."
-                              src={GoogleImage}
-                            />
+                            <img alt="..." src={GoogleImage} />
                           </span>
                           <span className="btn-inner--text">Google</span>
                         </Button>
@@ -166,8 +162,8 @@ class Login extends React.Component {
                     <Col xs="6">
                       <a
                         className="text-light"
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        href="resetpassword"
+                        //onClick={e => e.preventDefault()}
                       >
                         <small>Forgot password?</small>
                       </a>
@@ -175,7 +171,7 @@ class Login extends React.Component {
                     <Col className="text-right" xs="6">
                       <a
                         className="text-light"
-                        href="register-page"
+                        href="register"
                         // onClick={e => e.preventDefault()}
                       >
                         <small>Create new account</small>

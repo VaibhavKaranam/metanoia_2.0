@@ -1,6 +1,7 @@
 import React from "react";
 // nodejs library that concatenates classes
 import classnames from "classnames";
+import "./Landing.css";
 
 // reactstrap components
 import {
@@ -18,7 +19,7 @@ import {
   Row,
   Col,
   UncontrolledCarousel,
-  Modal
+  Modal,
 } from "reactstrap";
 
 // core components
@@ -44,22 +45,22 @@ import './landing.css';
 const items = [
   {
     src: Testimonial1,
-    altText: '',
-    caption: '',
-    header: ''
+    altText: "",
+    caption: "",
+    header: "",
   },
   {
     src: Testimonial2,
-    altText: '',
-    caption: '',
-    header: ''
+    altText: "",
+    caption: "",
+    header: "",
   },
   {
     src: Testimonial3,
-    altText: '',
-    caption: '',
-    header: ''
-  }
+    altText: "",
+    caption: "",
+    header: "",
+  },
 ];
 
 class Landing extends React.Component {
@@ -71,11 +72,11 @@ class Landing extends React.Component {
   }
 
   state = {
-    comingSoonModal: false
+    comingSoonModal: false,
   };
-  toggleModal = state => {
+  toggleModal = (state) => {
     this.setState({
-      [state]: !this.state[state]
+      [state]: !this.state[state],
     });
   };
 
@@ -87,21 +88,8 @@ class Landing extends React.Component {
           <div className="position-relative">
             {/* shape Hero */}
             <section className="section section-lg section-shaped pb-300">
-              <div className="shape shape-style-1 shape-default">
-              <img
-                      alt="..."
-                      src={Banner}
-                      
-                    />
-                {/* <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
-                <span /> */}
+              <div className="shape shape-style-1 shape-default cont">
+                <img alt="..." src={Banner} className="bannerStyles" />
               </div>
               <Container className="py-lg-md d-flex">
                 <div className="col px-0">
@@ -199,28 +187,34 @@ class Landing extends React.Component {
                                 className="close"
                                 data-dismiss="modal"
                                 type="button"
-                                onClick={() => this.toggleModal("comingSoonModal")}
+                                onClick={() =>
+                                  this.toggleModal("comingSoonModal")
+                                }
                               >
                                 <span aria-hidden={true}>×</span>
                               </button>
                             </div>
                             <div className="modal-body">
-                            <div className="py-3 text-center">
-                              <h2 className="heading">Coming soon! Check back for more updates!</h2>
+                              <div className="py-3 text-center">
+                                <h2 className="heading">
+                                  Coming soon! Check back for more updates!
+                                </h2>
+                              </div>
                             </div>
-                          </div>
-                          <div className="modal-footer">
-                            <Button
-                              className="text-white ml-auto"
-                              color="link"
-                              data-dismiss="modal"
-                              type="button"
-                              onClick={() => this.toggleModal("comingSoonModal")}
-                            >
-                              Close
-                            </Button>
-                          </div>
-                        </Modal>
+                            <div className="modal-footer">
+                              <Button
+                                className="text-white ml-auto"
+                                color="link"
+                                data-dismiss="modal"
+                                type="button"
+                                onClick={() =>
+                                  this.toggleModal("comingSoonModal")
+                                }
+                              >
+                                Close
+                              </Button>
+                            </div>
+                          </Modal>
                         </CardBody>
                       </Card>
                     </Col>
@@ -248,7 +242,9 @@ class Landing extends React.Component {
                             className="mt-4"
                             color="success"
                             href=""
-                            onClick={() => this.toggleModal("comingSoonModal_1")}
+                            onClick={() =>
+                              this.toggleModal("comingSoonModal_1")
+                            }
                           >
                             Explore
                           </Button>
@@ -264,27 +260,33 @@ class Landing extends React.Component {
                                 className="close"
                                 data-dismiss="modal"
                                 type="button"
-                                onClick={() => this.toggleModal("comingSoonModal_1")}
+                                onClick={() =>
+                                  this.toggleModal("comingSoonModal_1")
+                                }
                               >
                                 <span aria-hidden={true}>×</span>
                               </button>
                             </div>
                             <div className="modal-body">
-                            <div className="py-3 text-center">
-                              <h2 className="heading">Coming soon! Check back for more updates!</h2>
+                              <div className="py-3 text-center">
+                                <h2 className="heading">
+                                  Coming soon! Check back for more updates!
+                                </h2>
+                              </div>
                             </div>
-                          </div>
-                          <div className="modal-footer">
-                            <Button
-                              className="text-white ml-auto"
-                              color="link"
-                              data-dismiss="modal"
-                              type="button"
-                              onClick={() => this.toggleModal("comingSoonModal_1")}
-                            >
-                              Close
-                            </Button>
-                          </div>
+                            <div className="modal-footer">
+                              <Button
+                                className="text-white ml-auto"
+                                color="link"
+                                data-dismiss="modal"
+                                type="button"
+                                onClick={() =>
+                                  this.toggleModal("comingSoonModal_1")
+                                }
+                              >
+                                Close
+                              </Button>
+                            </div>
                           </Modal>
                         </CardBody>
                       </Card>
@@ -313,7 +315,9 @@ class Landing extends React.Component {
                             className="mt-4"
                             color="warning"
                             href=""
-                            onClick={() => this.toggleModal("comingSoonModal_2")}
+                            onClick={() =>
+                              this.toggleModal("comingSoonModal_2")
+                            }
                           >
                             Explore
                           </Button>
@@ -329,27 +333,33 @@ class Landing extends React.Component {
                                 className="close"
                                 data-dismiss="modal"
                                 type="button"
-                                onClick={() => this.toggleModal("comingSoonModal_2")}
+                                onClick={() =>
+                                  this.toggleModal("comingSoonModal_2")
+                                }
                               >
                                 <span aria-hidden={true}>×</span>
                               </button>
                             </div>
                             <div className="modal-body">
-                            <div className="py-3 text-center">
-                              <h2 className="heading">Coming soon! Check back for more updates!</h2>
+                              <div className="py-3 text-center">
+                                <h2 className="heading">
+                                  Coming soon! Check back for more updates!
+                                </h2>
+                              </div>
                             </div>
-                          </div>
-                          <div className="modal-footer">
-                            <Button
-                              className="text-white ml-auto"
-                              color="link"
-                              data-dismiss="modal"
-                              type="button"
-                              onClick={() => this.toggleModal("comingSoonModal_2")}
-                            >
-                              Close
-                            </Button>
-                          </div>
+                            <div className="modal-footer">
+                              <Button
+                                className="text-white ml-auto"
+                                color="link"
+                                data-dismiss="modal"
+                                type="button"
+                                onClick={() =>
+                                  this.toggleModal("comingSoonModal_2")
+                                }
+                              >
+                                Close
+                              </Button>
+                            </div>
                           </Modal>
                         </CardBody>
                       </Card>
@@ -376,7 +386,8 @@ class Landing extends React.Component {
                     </div>
                     <h3 id="signUpTitle">Sign up for our personalized newsletter!</h3>
                     <p>
-                      A curated book recommendations list every month based on your preferences, just for you!
+                      A curated book recommendations list every month based on
+                      your preferences, just for you!
                     </p>
                     <Button
                       className="btn-icon"
@@ -461,7 +472,7 @@ class Landing extends React.Component {
                 </Col>
               </Row>
               {/* <Row className="row-grid mt-5"> */}
-                <UncontrolledCarousel items={items}/>
+              <UncontrolledCarousel items={items} />
               {/* </Row> */}
             </Container>
             {/* SVG separator */}
@@ -493,7 +504,7 @@ class Landing extends React.Component {
                       </p>
                       <FormGroup
                         className={classnames("mt-5", {
-                          focused: this.state.nameFocused
+                          focused: this.state.nameFocused,
                         })}
                       >
                         <InputGroup className="input-group-alternative">
@@ -505,14 +516,18 @@ class Landing extends React.Component {
                           <Input
                             placeholder="Your name"
                             type="text"
-                            onFocus={e => this.setState({ nameFocused: true })}
-                            onBlur={e => this.setState({ nameFocused: false })}
+                            onFocus={(e) =>
+                              this.setState({ nameFocused: true })
+                            }
+                            onBlur={(e) =>
+                              this.setState({ nameFocused: false })
+                            }
                           />
                         </InputGroup>
                       </FormGroup>
                       <FormGroup
                         className={classnames({
-                          focused: this.state.emailFocused
+                          focused: this.state.emailFocused,
                         })}
                       >
                         <InputGroup className="input-group-alternative">
@@ -524,8 +539,12 @@ class Landing extends React.Component {
                           <Input
                             placeholder="Email address"
                             type="email"
-                            onFocus={e => this.setState({ emailFocused: true })}
-                            onBlur={e => this.setState({ emailFocused: false })}
+                            onFocus={(e) =>
+                              this.setState({ emailFocused: true })
+                            }
+                            onBlur={(e) =>
+                              this.setState({ emailFocused: false })
+                            }
                           />
                         </InputGroup>
                       </FormGroup>

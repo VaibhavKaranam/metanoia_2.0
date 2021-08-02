@@ -36,7 +36,7 @@ import {
   Container,
   Row,
   Col,
-  UncontrolledTooltip
+  UncontrolledTooltip,
 } from "reactstrap";
 
 import Logo from "assets/img/brand/header_logo.png";
@@ -46,26 +46,58 @@ class DemoNavbar extends React.Component {
     let headroom = new Headroom(document.getElementById("navbar-main"));
     // initialise
     headroom.init();
-
+    window.addEventListener("resize", this.handleResize);
   }
+  componentWillUnmount() {
+    window.addEventListener("resize", this.handleResize);
+  }
+
+  handleResize = (e) => {
+    this.setState({ windowWidth: window.innerWidth });
+  };
+
   state = {
     collapseClasses: "",
-    collapseOpen: false
+    collapseOpen: false,
+    windowWidth: window.innerWidth,
   };
 
   onExiting = () => {
     this.setState({
-      collapseClasses: "collapsing-out"
+      collapseClasses: "collapsing-out",
     });
   };
 
   onExited = () => {
     this.setState({
-      collapseClasses: ""
+      collapseClasses: "",
     });
   };
 
   render() {
+    if (this.state.windowWidth < 992) {
+      var a = (
+        <NavLink
+          className="nav-link-icon"
+          href="subscribe"
+          id="tooltip356693867" //
+        >
+          <i className="ni ni-bold-right d-lg-none mr-1" />
+          <span className="nav-link-inner--text">Subscribe</span>
+        </NavLink>
+      );
+    } else {
+      var b = (
+        <Button
+          className="btn-neutral btn-icon"
+          color="default"
+          href="subscribe"
+        >
+          <span className="nav-link-inner--text ml-1">Subscribe</span>
+        </Button>
+      );
+    }
+
     return (
       <>
         <header className="header-global">
@@ -78,10 +110,7 @@ class DemoNavbar extends React.Component {
           >
             <Container>
               <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
-                <img
-                  alt="..."
-                  src={Logo}
-                />
+                <img alt="..." src={Logo} />
               </NavbarBrand>
               <button className="navbar-toggler" id="navbar_global">
                 <span className="navbar-toggler-icon" />
@@ -113,7 +142,7 @@ class DemoNavbar extends React.Component {
                   </Row>
                 </div>
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
-                <NavItem>
+                  <NavItem>
                     <NavLink
                       className="nav-link-icon"
                       href="landing"
@@ -154,15 +183,8 @@ class DemoNavbar extends React.Component {
                     </NavLink>
                   </NavItem>
                   <NavItem className="d-lg-block ml-lg-4">
-                    <Button
-                      className="btn-neutral btn-icon"
-                      color="default"
-                      href="subscribe"
-                    >
-                      <span className="nav-link-inner--text ml-1">
-                        Subscribe
-                      </span>
-                    </Button>
+                    {a}
+                    {b}
                   </NavItem>
                 </Nav>
               </UncontrolledCollapse>

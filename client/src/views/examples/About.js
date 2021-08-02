@@ -1,14 +1,8 @@
 import React from "react";
-// nodejs library that concatenates classes
-import classnames from "classnames";
+import "./About.css";
 
 // reactstrap components
-import {
-  Button,
-  Container,
-  Row,
-  Col
-} from "reactstrap";
+import { Button, Container, Row, Col } from "reactstrap";
 
 // core components
 import DemoNavbar from "components/Navbars/DemoNavbar.js";
@@ -38,15 +32,11 @@ class About extends React.Component {
       <>
         <DemoNavbar />
         <main ref="main">
-        <div className="position-relative">
+          <div className="position-relative">
             {/* shape Hero */}
             <section className="section section-lg section-shaped pb-200">
-              <div className="shape shape-style-1 shape-default">
-              <img
-                      alt="..."
-                      src={Banner}
-                      
-                    />
+              <div className="shape shape-style-1 shape-default cont">
+                <img alt="..." src={Banner} className="bannerStyles2" />
               </div>
               <Container className="py-lg-md d-flex">
                 <div className="col px-0">
@@ -55,12 +45,15 @@ class About extends React.Component {
                       <h1 id="heading" className="display-3 text-white">
                         About Us{" "}
                       </h1>
-                      <p className="lead text-white">
-                        Metanoia is an upcoming EdTech startup that seeks to put social issues 
-                        at the forefront of children’s lives through our virtual interactive library. 
-                        Our website bridges the communication gap between parents/teachers and students by 
-                        tailoring personalized book recommendations that foster meaningful discussions. 
-                        K-5 students will be able to enrich their knowledge whenever and wherever they go!
+                      <p className="lead text-white" style={{ margin: 15 }}>
+                        Metanoia is an upcoming EdTech startup that seeks to put
+                        social issues at the forefront of children’s lives
+                        through our virtual interactive library. Our website
+                        bridges the communication gap between parents/teachers
+                        and students by tailoring personalized book
+                        recommendations that foster meaningful discussions. K-5
+                        students will be able to enrich their knowledge whenever
+                        and wherever they go!
                       </p>
                     </Col>
                   </Row>
@@ -108,109 +101,112 @@ class About extends React.Component {
                         <span className="d-block mb-10">Co-Founder</span>
                       </h6>
                     </div>
-                  </div>
-                </Col>
-                <Col className="mb-4 mb-lg-0" md="4">
-                  <div className="px-4">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={JessImage}
-                      style={{ width: "300px" }}
-                    />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">Jessica Li</span>
-                      </h5>
-                      <h6 className="title">
-                        <span className="d-block mb-10">Co-Founder</span>
-                      </h6>
+                  </Col>
+                  <Col className="mb-4 mb-lg-0" md="4">
+                    <div className="px-4">
+                      <img
+                        alt="..."
+                        className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                        src={JessImage}
+                        style={{ width: "300px" }}
+                      />
+                      <div className="pt-4 text-center">
+                        <h5 className="title">
+                          <span className="d-block mb-1">Jessica Li</span>
+                        </h5>
+                        <h6 className="title">
+                          <span className="d-block mb-10">Co-Founder</span>
+                        </h6>
+                      </div>
                     </div>
-                  </div>
-                </Col>
-                <Col className="mb-4 mb-lg-0" md="4">
-                  {/* maybe add lg="3" md="6"?? */}
-                  <div className="px-4">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={TanveeImage}
-                      style={{ width: "300px" }}
-                    />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">Tanvee Joshi</span>
-                      </h5>
-                      <h6 className="title">
-                        <span className="d-block mb-10">Co-Founder</span>
-                      </h6>
+                  </Col>
+                  <Col className="mb-4 mb-lg-0" md="4">
+                    {/* maybe add lg="3" md="6"?? */}
+                    <div className="px-4">
+                      <img
+                        alt="..."
+                        className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                        src={TanveeImage}
+                        style={{ width: "300px" }}
+                      />
+                      <div className="pt-4 text-center">
+                        <h5 className="title">
+                          <span className="d-block mb-1">Tanvee Joshi</span>
+                        </h5>
+                        <h6 className="title">
+                          <span className="d-block mb-10">Co-Founder</span>
+                        </h6>
+                      </div>
                     </div>
-                  </div>
-                </Col>
-              </Row>
-              <Row>
-                <Col className="mb-4 mb-lg-0" md="4">
-                  <div className="px-4">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={CassidyImage}
-                      style={{ width: "300px" }}
-                    />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">Cassidy Cheng</span>
-                      </h5>
-                      <h6 className="title">
-                        <span className="d-block mb-10">Head of BD/Marketing</span>
-                      </h6>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col className="mb-4 mb-lg-0" md="4">
+                    <div className="px-4">
+                      <img
+                        alt="..."
+                        className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                        src={CassidyImage}
+                        style={{ width: "300px" }}
+                      />
+                      <div className="pt-4 text-center">
+                        <h5 className="title">
+                          <span className="d-block mb-1">Cassidy Cheng</span>
+                        </h5>
+                        <h6 className="title">
+                          <span className="d-block mb-10">
+                            Head of BD/Marketing
+                          </span>
+                        </h6>
+                      </div>
                     </div>
-                  </div>
-                </Col>
-                <Col className="mb-4 mb-lg-0" md="4">
-                  <div className="px-4">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={JoyceImage}
-                      style={{ width: "300px" }}
-                    />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">Joyce Mok</span>
-                      </h5>
-                      <h6 className="title">
-                        <span className="d-block mb-10">Head of UI/UX</span>
-                      </h6>
+                  </Col>
+                  <Col className="mb-4 mb-lg-0" md="4">
+                    <div className="px-4">
+                      <img
+                        alt="..."
+                        className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                        src={JoyceImage}
+                        style={{ width: "300px" }}
+                      />
+                      <div className="pt-4 text-center">
+                        <h5 className="title">
+                          <span className="d-block mb-1">Joyce Mok</span>
+                        </h5>
+                        <h6 className="title">
+                          <span className="d-block mb-10">Head of UI/UX</span>
+                        </h6>
+                      </div>
                     </div>
-                  </div>
-                </Col>
-                <Col className="mb-4 mb-lg-0" md="4">
-                  {/* maybe add lg="3" md="6"?? */}
-                  <div className="px-4">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
-                      src={BrettImage}
-                      style={{ width: "300px" }}
-                    />
-                    <div className="pt-4 text-center">
-                      <h5 className="title">
-                        <span className="d-block mb-1">Brett Woltz</span>
-                      </h5>
-                      <h6 className="title">
-                        <span className="d-block mb-10">Head of Web + Software Development</span>
-                      </h6>
+                  </Col>
+                  <Col className="mb-4 mb-lg-0" md="4">
+                    {/* maybe add lg="3" md="6"?? */}
+                    <div className="px-4">
+                      <img
+                        alt="..."
+                        className="rounded-circle img-center img-fluid shadow shadow-lg--hover"
+                        src={BrettImage}
+                        style={{ width: "300px" }}
+                      />
+                      <div className="pt-4 text-center">
+                        <h5 className="title">
+                          <span className="d-block mb-1">Brett Woltz</span>
+                        </h5>
+                        <h6 className="title">
+                          <span className="d-block mb-10">
+                            Head of Web + Software Development
+                          </span>
+                        </h6>
+                      </div>
                     </div>
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-          </section>
+                  </Col>
+                </Row>
+              </Container>
+            </section>
           </div>
-          </main>
-          <SimpleFooter />
-          </>
+        </main>
+        <SimpleFooter />
+      </>
     );
   }
 }
