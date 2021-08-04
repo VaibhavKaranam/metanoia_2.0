@@ -101,6 +101,7 @@ class About extends React.Component {
                         <span className="d-block mb-10">Co-Founder</span>
                       </h6>
                     </div>
+                    </div>
                   </Col>
                   <Col className="mb-4 mb-lg-0" md="4">
                     <div className="px-4">
