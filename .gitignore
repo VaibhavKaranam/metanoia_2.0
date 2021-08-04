@@ -1,3 +1,4 @@
-#Do not want node_modules
+#Do not want node_modules or DS_Store
 node_modules
 client/node_modules
+**/.DS_Store
